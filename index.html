@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Tulloch — ML Engineer</title>
+  <meta name="description" content="ML engineer focused on inference systems, model quantization, and end-to-end deployment. Open to full-time roles and contract work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --background: #0f0f0f;
+      --foreground: #d4d2cb;
+      --muted:      #5a5955;
+      --border:     #222220;
+      --surface:    #161614;
+      --accent:     #c8f560;
+    }
+
+    html {
+      background-color: var(--background);
+      font-size: 14px;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    nav .wordmark {
+      color: var(--foreground);
+    }
+
+    nav .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .links a {
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+
+    nav .links a:hover {
+      color: var(--foreground);
+      text-decoration: none;
+    }
+
+    /* ── Main ── */
+    main {
+      padding: 48px 0;
+    }
+
+    section {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--foreground);
+      line-height: 1.8;
+    }
+
+    p {
+      margin-top: 24px;
+      color: var(--foreground);
+      line-height: 1.8;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── Pre blocks ── */
+    pre {
+      margin-top: 32px;
+      overflow-x: auto;
+      border-radius: 0;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 24px;
+      color: var(--foreground);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      white-space: pre;
+    }
+
+    pre + pre {
+      margin-top: 24px;
+    }
+
+    pre a {
+      color: var(--accent);
+    }
+
+    /* ── Footer ── */
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      color: var(--muted);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      nav .links {
+        gap: 14px;
+      }
+
+      pre {
+        padding: 16px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <span class="wordmark">justin tulloch</span>
+      <div class="links">
+        <a href="#work">work</a>
+        <a href="#stack">stack</a>
+        <a href="#contact">contact</a>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- Hero -->
+      <section>
+        <h2>ML engineer building inference systems and shipping them.</h2>
+        <p>
+          I focus on inference systems, model quantization, and end-to-end
+          deployment — taking models from training through serving in
+          production. I care about the full path: the quantized weights, the
+          wire format, the latency budget, and the dashboard someone stares at
+          when it breaks.
+        </p>
+        <p>Open to full-time roles and contract work.</p>
+      </section>
+
+      <hr />
+
+      <!-- Work -->
+      <section id="work">
+        <h2>Things I've built, end to end.</h2>
+        <p>
+          Two projects serving the same model two different ways — one over
+          gRPC with a real-time frontend, one as a streaming pipeline.
+        </p>
+
+        <pre>Split Inference gRPC Demo
+
+  model     BitrateLSTM — 2-layer LSTM, hidden_size=128, qint8 quantized
+  training  Higgs dataset augmentation: outage injection +
+            satellite handoff scenarios
+  output    p50 / p90 / p95 quantile predictions
+  frontend  SpaceX-aesthetic Three.js over FastAPI on HuggingFace Spaces
+
+  stack     PyTorch · gRPC · FastAPI · Three.js · HuggingFace · Docker
+
+  demo      <a href="https://justintulloch.github.io/split-inference-grpc-demo" target="_blank" rel="noreferrer">justintulloch.github.io/split-inference-grpc-demo ↗</a>
+  repo      <a href="https://github.com/justintulloch/split-inference-grpc-demo" target="_blank" rel="noreferrer">github.com/justintulloch/split-inference-grpc-demo ↗</a></pre>
+
+        <pre>Kafka–Flink–Grafana Pipeline
+
+  summary   original streaming architecture for the same model
+  ingestion Kafka
+  process   Flink stream processing
+  observe   Grafana dashboards
+
+  stack     Kafka · Flink · Grafana · Docker · Python</pre>
+      </section>
+
+      <hr />
+
+      <!-- Stack -->
+      <section id="stack">
+        <h2>The tools I reach for.</h2>
+
+        <pre>ML / Training    PyTorch · LSTM · qint8 quantization · Higgs augmentation
+Serving          gRPC · FastAPI · HuggingFace Spaces · Docker
+Streaming        Kafka · Flink
+Observability    Grafana
+Frontend         Three.js
+Languages        Python</pre>
+      </section>
+
+      <hr />
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Get in touch.</h2>
+
+        <pre>Email      <a href="mailto:hello@justintulloch.dev">hello@justintulloch.dev</a>
+GitHub     <a href="https://github.com/justintulloch" target="_blank" rel="noreferrer">github.com/justintulloch ↗</a>
+LinkedIn   <a href="https://linkedin.com/in/justintulloch" target="_blank" rel="noreferrer">linkedin.com/in/justintulloch ↗</a></pre>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>justin tulloch</span>
+      <span>ml engineer</span>
+    </footer>
+
+  </div>
+</body>
+</html>
