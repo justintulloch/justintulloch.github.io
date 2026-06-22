@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Justin Tulloch — ML Engineer</title>
-  <meta name="description" content="ML engineer focused on inference systems, model quantization, and end-to-end deployment. Open to full-time roles and contract work." />
+  <meta name="description" content="Software engineer focused on inference systems, model quantization, and end-to-end deployment. Open to full-time roles and contract work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
@@ -172,13 +172,14 @@
 
       <!-- Hero -->
       <section>
-        <h2>ML engineer building inference systems and shipping them.</h2>
+        <h2>Software engineer building mission critical systems end-to-end.</h2>
         <p>
-          I focus on inference systems, model quantization, and end-to-end
-          deployment — taking models from training through serving in
-          production. I care about the full path: the quantized weights, the
-          wire format, the latency budget, and the dashboard someone stares at
-          when it breaks.
+          I work across the stack; React and TypeScript at the surface,
+          Python, Go, Rust underneath — building software from interface to
+          inference. I care about the full path: the API contract two teams
+          agree on, and the dashboard they're staring at when it happens. My
+          focus is on performance, reliability, and evolving complex systems safely
+          over time.
         </p>
         <p>Open to full-time roles and contract work.</p>
       </section>
@@ -189,8 +190,8 @@
       <section id="work">
         <h2>Things I've built, end to end.</h2>
         <p>
-          Two projects serving the same model two different ways — one over
-          gRPC with a real-time frontend, one as a streaming pipeline.
+          Two projects span multiple layers of complexiity. Lately I've been 
+          pushing deeper into lower-level systems work — Rust and C++. 
         </p>
 
         <pre>Split Inference gRPC Demo
@@ -206,14 +207,18 @@
   demo      <a href="https://justintulloch.github.io/split-inference-grpc-demo" target="_blank" rel="noreferrer">justintulloch.github.io/split-inference-grpc-demo ↗</a>
   repo      <a href="https://github.com/justintulloch/split-inference-grpc-demo" target="_blank" rel="noreferrer">github.com/justintulloch/split-inference-grpc-demo ↗</a></pre>
 
-        <pre>Kafka–Flink–Grafana Pipeline
+        <pre>EMBER: Ephemeral Model-based Burst Execution Runtime
 
-  summary   original streaming architecture for the same model
-  ingestion Kafka
-  process   Flink stream processing
-  observe   Grafana dashboards
+  architecture  Polygot Substrate — Go Network Fabric + Native Rust Kernel 
+  refactor   Remediated non-deterministic AI Python code into structured,
+             type-safe Rust modules to eliminate runtime jitter and GC spikes
+  memory     Zero-copy shared memory weight pinning (400MB mmap) via Rust FFI
+  discipline Strict 20ms Abort-Early Routing & 100ms Queue Dead-Letter TTL       
+  metrics    Real-time telemetry tracking Queue Drift and Hysteresis states
 
-  stack     Kafka · Flink · Grafana · Docker · Python</pre>
+  stack     Rust (Py03) · Go · Python 3.14 (PEP 734) · gRPC · Shared Memory</pre
+
+  repo      <a href="https://github.com/justintulloch/ephemeral-execution-engine" target="_blank" rel="noreferrer">github.com/justintulloch/ephemeral-execution-engine ↗</a></pre>                                                                         >
       </section>
 
       <hr />
@@ -222,12 +227,13 @@
       <section id="stack">
         <h2>The tools I reach for.</h2>
 
-        <pre>ML / Training    PyTorch · LSTM · qint8 quantization · Higgs augmentation
+        <pre>Langauges    Python · TypeScript · Go · Rust · C++
 Serving          gRPC · FastAPI · HuggingFace Spaces · Docker
+Datebase         PostgreSQL · MongoDB · Supabase 
 Streaming        Kafka · Flink
 Observability    Grafana
-Frontend         Three.js
-Languages        Python</pre>
+Frontend         Three.js · Next.js · React.js
+        </pre>
       </section>
 
       <hr />
@@ -236,7 +242,7 @@ Languages        Python</pre>
       <section id="contact">
         <h2>Get in touch.</h2>
 
-        <pre>Email      <a href="mailto:hello@justintulloch.dev">hello@justintulloch.dev</a>
+        <pre>Email      <a href="mailto:hello@justintulloch.dev">tkljustin@outlook.com</a>
 GitHub     <a href="https://github.com/justintulloch" target="_blank" rel="noreferrer">github.com/justintulloch ↗</a>
 LinkedIn   <a href="https://linkedin.com/in/justintulloch" target="_blank" rel="noreferrer">linkedin.com/in/justintulloch ↗</a></pre>
       </section>
@@ -245,7 +251,7 @@ LinkedIn   <a href="https://linkedin.com/in/justintulloch" target="_blank" rel="
 
     <footer>
       <span>justin tulloch</span>
-      <span>ml engineer</span>
+      <span>Systems engineer</span>
     </footer>
 
   </div>
